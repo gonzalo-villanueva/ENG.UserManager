@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/*.csproj": false,
+        "**/*.db-shm": true,
+        "**/*.db-wal": true,
+    },
+
+    "csharpextensions.privateMemberPrefix": "_",
+    "csharpextensions.useFileScopedNamespace": true,
+    "csharpextensions.useThisForCtorAssignments": false
+}

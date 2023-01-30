@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  mongodb:
+    container_name: UserManager.MongoDB
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodbdata:/data/db
+    networks:
+      - backend
+
+  webapi:
+    container_name: UserManager.WebAPI
+    build: .
+    environment:
+      - MONGODB_URL=root:example@mongodb:27017
+      - MONGODB_DATABASE=UserManager
+      - MONGODB_COLLECTION=Users
+    ports:
+      - "80:80"
+    depends_on:
+      - mongodb
+    networks:
+      - backend
+volumes:
+  mongodbdata:
+networks:
+  backend:

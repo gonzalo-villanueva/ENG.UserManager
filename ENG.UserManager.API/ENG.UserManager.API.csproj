@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ENG.UserManager.Application\ENG.UserManager.Application.csproj" />
+    <ProjectReference Include="..\ENG.UserManager.Domain\ENG.UserManager.Domain.csproj" />
+    <ProjectReference Include="..\ENG.UserManager.Infrastructure\ENG.UserManager.Infrastructure.csproj" />
+    <ProjectReference Include="..\ENG.UserManager.Persistence\ENG.UserManager.Persistence.csproj" />
+    <ProjectReference Include="..\ENG.UserManager.Services\ENG.UserManager.Services.csproj" />
+  </ItemGroup>
+
+</Project>
